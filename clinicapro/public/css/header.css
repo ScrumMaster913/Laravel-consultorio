@@ -73,6 +73,7 @@ header {
     overflow:hidden;
     background:#3c8dbc;
     margin-bottom:0px;
+    margin-left: 200px;
 }
 
 
@@ -92,6 +93,14 @@ header .usuariogc {
     float:left;
 }
 
+.top-header{
+    margin-top: 15px;
+    margin-left: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #fff;
+    font-size: 1.5em;
+}
+
 header nav{
     float:right;
     line-height:60px;
@@ -109,6 +118,7 @@ header nav a{
     -webkit-transition:all 500ms ease;
     -o-transition:all 500ms ease;
     transition:all 500ms ease;
+    margin-right: 200px;
 }
 
 header nav a:hover{

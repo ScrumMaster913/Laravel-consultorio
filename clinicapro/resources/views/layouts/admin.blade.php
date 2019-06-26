@@ -14,14 +14,15 @@
 		<script type="text/javascript" src={{asset('js/boostrap.min.js')}}></script>
 		<script src="http://code.jquery.com/jquery-latest.js"></script>
 		<script type="text/javascript" src={{asset('js/header.js')}}></script>
-        <link href="{{asset('https://fonts.googleapis.com/icon?family=Material+Icons')}}" rel="stylesheet">
+		<link href="{{asset('https://fonts.googleapis.com/icon?family=Material+Icons')}}" rel="stylesheet">
+		<link rel="stylesheet" href="{{asset('css/menu_lateral.css')}}">
 
 	</head>
 
 	<body>
 		<!-- inicio header-->
 		<header class="header">
-		<div>Siempre mujer</div>
+		<div class="top-header">Consultorio Obstétrico</div>
 			<div class="wrapper">
 				<div>
 					<div class="usuariogc">Bienvenido: {{ Auth::user()->nick }}</div>
@@ -35,7 +36,7 @@
 		<!-- fin header-->
 		
         <!-- inicio del menu lateral-->
-        <script src="js/main.js"></script>
+        <!-- <script src="js/main.js"></script>
 		<div id="barra-lateral">
 			<div id="logo-menu">
 			</div>
@@ -115,9 +116,24 @@
 		</div>
 		<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
 
-	</body>
+	</body> -->
         <!-- fin del menu lateral -->
- 
+	<div id="sidebar">
+      <!-- <div class="toggle-btn">
+        <span>&#9776</span>
+      </div> -->
+      <ul id="sidebar_column">
+        <li>
+          <img src="img/logo_mujer.jpg" alt="Logotipo" class="logosidebar">
+        </li>
+        <li><a href="/inicio">Inicio</a></li>
+        <li><a href="/usuario">Usuarios</a></li>
+		<li><a href="/paciente">Pacientes</a></li>
+		<li><a href="/atencion">Atenciones</a></li>
+      </ul>
+    </div>
+
+    <!-- <script type="text/javascript" src={{asset('js/menu_lateral.js')}}></script> -->
         <body>
         	<div class="contenido">
 				<div class="contenido--tabla">
