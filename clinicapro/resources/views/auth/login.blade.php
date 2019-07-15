@@ -30,7 +30,7 @@
             <form  role="form" method="POST" action="{{ url('/login') }}">
                 {{ csrf_field() }}
                 <div class="iniciar--title">
-                    <h2>SIEMPRE MUJER</h2>
+                    <h2>LOGIN</h2>
                     <span>Consultorio obstetrico</span>
                 </div>
                 <br>
@@ -56,7 +56,7 @@
                 
                 <div class="form-group">
                     <div class="col-md-6 col-md-offset-4">
-                        <button type="submit" class="btn-principal">
+                        <button type="submit" class="btn-principal" style="background-color: blue">
                             <!-- <i class="fa fa-btn fa-sign-in"></i> --> Login
                         </button>
                     </div>

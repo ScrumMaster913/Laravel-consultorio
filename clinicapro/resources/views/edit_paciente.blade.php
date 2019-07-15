@@ -9,15 +9,16 @@
 	<br>
  	{!!Form::model($paciente,['route'=> ['paciente.update', $paciente], 'method'=>'PUT'])!!}
 		<div class="iniciar--campo">
-			<h5>{!!Form::label('nombres','Nombres:')!!}</h5>
-			{!!Form::text('nombres',null,['class'=>'input--formulario','placeholder'=>'Nombres del paciente'])!!}
+			<h5>{!!Form::label('nombres','Nombre Completo:')!!}</h5>
+			{!!Form::text('nombres',null,['class'=>'input--formulario','placeholder'=>'Nombre completo del paciente'])!!}
 		</div>
 		<br>
-		<div class="iniciar--campo">
-			<h5>{!!Form::label('apellidos','Apellidos:')!!}</h5>
-			{!!Form::text('apellidos',null,['class'=>'input--formulario','placeholder'=>'Apellidos del paciente'])!!}
+		<div class="iniciar--campo" style="display: none">
+			<input type="text" value="last" name="apellidos">
+{{--			<h5>{!!Form::label('apellidos','Apellidos:')!!}</h5>--}}
+{{--			{!!Form::text('apellidos',null,['class'=>'input--formulario','placeholder'=>'Apellidos del paciente'])!!}--}}
 		</div>
-		<br>
+{{--		<br>--}}
 		<div class="iniciar--campo">
 			<h5>{!!Form::label('celular','Celular:')!!}</h5>
 			{!!Form::text('celular',null,['class'=>'input--formulario','placeholder'=>'Celular del paciente'])!!}

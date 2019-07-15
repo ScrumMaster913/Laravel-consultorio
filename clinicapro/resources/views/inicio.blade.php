@@ -66,54 +66,54 @@
             <a href="/paciente#modalregistropaciente" class="small-box-footer">Nuevo Paciente <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
-        <div class="col-lg-3 col-xs-6">
+{{--        <div class="col-lg-3 col-xs-6">--}}
 
-          <div class="small-box bg-red">
-            <div class="inner">
-              <a href="/insumo" style="color: white;">
-              <h3>{{$insumos}}</h3>
-              <p>Insumos</p>
-              </a>
-            </div>
-            <div class="icon">
-              <i class="ion ion-pie-graph"></i>
-            </div>
-            
-            <a href="/insumo#modalregistroinsumo" class="small-box-footer">Nuevo insumo <i class="fa fa-arrow-circle-right"></i></a>
-          </div>
-        </div>
+{{--          <div class="small-box bg-red">--}}
+{{--            <div class="inner">--}}
+{{--              <a href="/insumo" style="color: white;">--}}
+{{--              <h3>{{$insumos}}</h3>--}}
+{{--              <p>Insumos</p>--}}
+{{--              </a>--}}
+{{--            </div>--}}
+{{--            <div class="icon">--}}
+{{--              <i class="ion ion-pie-graph"></i>--}}
+{{--            </div>--}}
+{{--            --}}
+{{--            <a href="/insumo#modalregistroinsumo" class="small-box-footer">Nuevo insumo <i class="fa fa-arrow-circle-right"></i></a>--}}
+{{--          </div>--}}
+{{--        </div>--}}
       </div>
 <br>
-<h1 style="margin: 4;font-size: 24px;"> <br>Ganancias por dia  </h1>
+{{--<h1 style="margin: 4;font-size: 24px;"> <br>Ganancias por dia  </h1>--}}
 
-    <div id="curve_chart" style="width: 1000px; height: 600px; float: left;"></div>
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
- <head>
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
-      google.charts.load('current', {'packages':['corechart']});
-      google.charts.setOnLoadCallback(drawChart);
+{{--    <div id="curve_chart" style="width: 1000px; height: 600px; float: left;"></div>--}}
+{{--    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>--}}
+{{-- <head>--}}
+{{--    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>--}}
+{{--    <script type="text/javascript">--}}
+{{--      google.charts.load('current', {'packages':['corechart']});--}}
+{{--      google.charts.setOnLoadCallback(drawChart);--}}
 
-      function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-          ['fecha Atencion', 'Total',],
-            @foreach ($user as $usuario)
-            [{{$usuario->fecha_atencion}},{{$usuario->precio2}}],
+{{--      function drawChart() {--}}
+{{--        var data = google.visualization.arrayToDataTable([--}}
+{{--          ['fecha Atencion', 'Total',],--}}
+{{--            @foreach ($user as $usuario)--}}
+{{--            [{{$usuario->fecha_atencion}},{{$usuario->precio2}}],--}}
 
-            @endforeach
-        ]);
+{{--            @endforeach--}}
+{{--        ]);--}}
 
-        var options = {
-          curveType: 'function',
-          legend: { position: 'bottom' }
-        };
+{{--        var options = {--}}
+{{--          curveType: 'function',--}}
+{{--          legend: { position: 'bottom' }--}}
+{{--        };--}}
 
-        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+{{--        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));--}}
 
-        chart.draw(data, options);
-      }
-    </script>
-  </head>
+{{--        chart.draw(data, options);--}}
+{{--      }--}}
+{{--    </script>--}}
+{{--  </head>--}}
   <body>
     <div id="curve_chart" style="width: 900px; height: 500px"></div>
   </body>

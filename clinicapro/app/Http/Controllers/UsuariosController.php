@@ -7,6 +7,7 @@ use App\Models\Usuario;
 use Session;
 use Redirect;
 use App\Http\Requests;
+use Illuminate\Support\Facades\Hash;
 
 class UsuariosController extends Controller
 {
@@ -21,6 +22,7 @@ class UsuariosController extends Controller
     public function index(Request $request)
     {
 
+//        $usuarios = Usuario::nombre($request->get('name'))->orderBy('id_usuario', 'desc')->Paginate(3);
         $usuarios = Usuario::nombre($request->get('name'))->Paginate(3);
         return view('usuario.index',['usuarios'=>$usuarios]);
     }
@@ -48,6 +50,7 @@ class UsuariosController extends Controller
         $usuarios -> apellidos =$request -> apellidos;
         $usuarios -> nick =$request -> nick;
         $usuarios -> tipo_usuario =$request -> tipo_usuario;
+        $usuarios -> password  = Hash::make($request -> password);
         $usuarios -> save();
         Session::flash('message','Usuario Creado Correctamente');
         return Redirect::to('/usuario');

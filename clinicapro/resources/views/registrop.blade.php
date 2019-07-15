@@ -30,7 +30,7 @@
                             <thead class="titulo">
                                 <tr>
                                     <th>#</th>
-                                    <th>Nombres</th>
+                                    <th>Nombres Completo</th>
                                     <th>Celular</th>
                                     <th>DNI</th>
                                     <th>Accion</th>
@@ -66,14 +66,15 @@
 				{!!Form::open(['route'=>'paciente.store', 'method'=>'POST'])!!}
 				<a href="#close" title="Close" class="close">X</a>
 				<h2>Nuevo paciente</h2>
-				<div class="iniciar--campo">
-					<h5>{!!Form::label('nombres','Nombres:')!!}</h5>
-					{!!Form::text('nombres',null,['class'=>'input--formulario','placeholder'=>'Nombres del paciente'])!!}
-				</div>
 				<br>
 				<div class="iniciar--campo">
+					<h5>{!!Form::label('nombres','Nombres Completos:')!!}</h5>
+					{!!Form::text('nombres',null,['class'=>'input--formulario','placeholder'=>'Nombres completos del paciente'])!!}
+				</div>
+				<div class="iniciar--campo" style="display: none">
 					<h5>{!!Form::label('apellidos','Apellidos:')!!}</h5>
 					{!!Form::text('apellidos',null,['class'=>'input--formulario','placeholder'=>'Apellidos del paciente'])!!}
+					<input type="text" value="last" name="apellidos">
 				</div>
 				<br>
 				<div class="iniciar--campo">

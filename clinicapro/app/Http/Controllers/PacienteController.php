@@ -22,6 +22,7 @@ class PacienteController extends Controller
      */
     public function index(Request $request)
     {
+//        $pacientes = Paciente::nombre($request->get('name'))->orderBy('id_paciente', 'desc')->Paginate(20);
         $pacientes = Paciente::nombre($request->get('name'))->Paginate(20);
         return view('registrop',['pacientes'=>$pacientes]);
     }

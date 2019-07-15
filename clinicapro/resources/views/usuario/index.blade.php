@@ -15,7 +15,9 @@
 <br>
 <div class="btn--aciones">
 <a href="#modalregistrousuario" type="button" class="btn-primario">+ Nuevo usuario</a>
-{!!Form::open(['route' => 'usuario.index', 'method' => 'GET', 'class'=> 'navbar-form navbar-left', 'role'=>'search']) !!}
+{{--    <a href="/register" type="button" class="btn-primario">+ Nuevo usuario</a>--}}
+
+    {!!Form::open(['route' => 'usuario.index', 'method' => 'GET', 'class'=> 'navbar-form navbar-left', 'role'=>'search']) !!}
       <div class="form-group">
         {!! Form::text('name', null, ['class' => 'form-control', 'placeholder'=>'Nombre de usuario'])!!}
       </div>
@@ -32,8 +34,8 @@
                     <th>Nombres</th>
                     <th>Apellidos</th>
                     <th>Nick</th>
-                    <th>Tipo de usuario</th>
-                    <th>Editar</th>
+{{--                    <th>Tipo de usuario</th>--}}
+{{--                    <th>Editar</th>--}}
 
                 </tr>
             </thead>
@@ -44,8 +46,8 @@
 						<td>{{$usuario->nombres}}</td>
 						<td>{{$usuario->apellidos}}</td>
 						<td>{{$usuario->nick}}</td>
-						<td>{{$usuario->tipo_usuario}}	</td>
-						<td>{!!link_to_route('usuario.edit', $title = 'create', $parameters = $usuario, $attributes = ['class'=>'material-icons btn-accion'])!!}
+{{--						<td>{{$usuario->tipo_usuario}}	</td>--}}
+{{--						<td>{!!link_to_route('usuario.edit', $title = 'create', $parameters = $usuario, $attributes = ['class'=>'material-icons btn-accion'])!!}--}}
                         </td>
 					</tr>
 				@endforeach
@@ -82,9 +84,13 @@
             {!!Form::text('nick',null,['class'=>'input--formulario','placeholder'=>'Nick del usuario'])!!}
         </div>
         <br>
-        <div class="iniciar--campo">
+        <div class="iniciar--campo" style="display: none">
             <h5>{!!Form::label('tipo_usuario','Tipo de usuario:')!!}</h5>
             {!!Form::select('tipo_usuario',['Invitado','Administrador'],2,['class'=>'input--formulario','placeholder'=>'Tipo de usuario'])!!}
+        </div>
+        <div class="iniciar--campo">
+            <h5>{!!Form::label('password','Contraseña:')!!}</h5>
+            {!!Form::password('password',['class'=>'input--formulario'])!!}
         </div>
         <br>
         {!!Form::submit('Agregar',['class'=>'btn-primario'])!!}
